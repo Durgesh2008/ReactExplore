@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Counter from './componenys/Counter'
+import Counter1 from './componenys/Counter1'
+import Counter2 from './componenys/Counter2'
+import ApiDataShow from './componenys/ApiDataShow'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+<>
+{/* <Counter2/>
+<Counter1/> */}
+<ApiDataShow/>
+</>
+  )
 }
 
-export default App;
+export default App
