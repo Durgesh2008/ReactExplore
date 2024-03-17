@@ -1,8 +1,9 @@
 import React from 'react'
 import withDatafetching from '../Hoc/withDatafetching'
+import useGetAPI from '../Hook/useGetAPI'
 
-const ApiDataShow = ({ dataobj }) => {
-    const { data, loading, error } = dataobj;
+const ApiDataShow = () => {
+    const { data, loading, error } = useGetAPI("https://api.restful-api.dev/objects")
   if (loading){
     return <div>....Loading</div>
   }
@@ -29,4 +30,5 @@ const ApiDataShow = ({ dataobj }) => {
   )
 }
 
-export default withDatafetching("https://api.restful-api.dev/objects")(ApiDataShow) 
+export default ApiDataShow
+// export default withDatafetching("https://api.restful-api.dev/objects")(ApiDataShow) 
